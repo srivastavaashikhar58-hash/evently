@@ -41,6 +41,7 @@ searchForm.addEventListener("submit", (event) => {
   updateVisibleEvents();
 });
 
+searchInput.addEventListener("input", updateVisibleEvents);
 citySelect.addEventListener("change", updateVisibleEvents);
 
 categoryButtons.forEach((button) => {
