@@ -446,7 +446,8 @@ button:active {
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  padding: clamp(1.35rem, 3vw, 1.85rem);
+  padding: 0;
+  overflow: hidden;
   background: var(--color-surface);
   border: 1px solid var(--color-border-card);
   border-radius: var(--radius-md);
@@ -458,6 +459,33 @@ button:active {
   transform: translateY(-2px);
   border-color: var(--mocha-400);
   box-shadow: var(--shadow-md);
+}
+
+.event-card__media {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background-color: var(--mocha-100);
+}
+
+.event-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.35s ease;
+}
+
+.event-card:hover .event-card__image {
+  transform: scale(1.04);
+}
+
+.event-card__body {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: clamp(1.25rem, 2.5vw, 1.75rem);
 }
 
 /* Critical JS compatibility: ensure hidden attribute collapses elements */
@@ -624,8 +652,8 @@ footer a:hover {
     gap: 1.75rem;
   }
 
-  .event-card {
-    padding: 2rem;
+  .event-card__body {
+    padding: 1.75rem 2rem 2rem;
   }
 }
 
