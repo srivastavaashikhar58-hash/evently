@@ -4,6 +4,7 @@ const citySelect = document.querySelector("#event-city");
 const categoryButtons = document.querySelectorAll(".category-filter");
 const eventCards = document.querySelectorAll(".event-card");
 const resultsMessage = document.querySelector("#results-message");
+const resultsSection = document.querySelector("#upcoming-events");
 
 let selectedCategory = "all";
 
@@ -39,6 +40,9 @@ function updateVisibleEvents() {
 searchForm.addEventListener("submit", (event) => {
   event.preventDefault();
   updateVisibleEvents();
+  if (resultsSection) {
+    resultsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 });
 
 searchInput.addEventListener("input", updateVisibleEvents);

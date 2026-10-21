@@ -341,6 +341,7 @@ button:active {
 #categories,
 #upcoming-events {
   padding-top: clamp(3rem, 7vw, 5.5rem);
+  scroll-margin-top: 2rem;
 }
 
 #categories h2,
