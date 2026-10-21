@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Evently helps people discover upcoming events across India."
+    />
+    <title>Evently | Discover Events Across India</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Evently home">Evently</a>
+
+      <nav aria-label="Primary navigation">
+        <ul>
+          <li><a href="#upcoming-events">Discover</a></li>
+          <li><a href="#categories">Categories</a></li>
+          <li><a href="#footer">About</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="hero-heading">
+        <p class="eyebrow">India's event discovery guide</p>
+        <h1 id="hero-heading">Find an experience worth leaving home for.</h1>
+        <p>
+          Discover music, culture, food, sport, and creative events happening
+          across India.
+        </p>
+
+        <form action="#upcoming-events" method="get" role="search">
+          <div>
+            <label for="event-search">What are you looking for?</label>
+            <input
+              id="event-search"
+              name="query"
+              type="search"
+              placeholder="Try music, comedy, workshops..."
+            />
+          </div>
+
+          <div>
+            <label for="event-city">Where?</label>
+            <select id="event-city" name="city">
+              <option value="all-india">All India</option>
+              <option value="bengaluru">Bengaluru</option>
+              <option value="delhi">Delhi NCR</option>
+              <option value="goa">Goa</option>
+              <option value="jaipur">Jaipur</option>
+              <option value="kolkata">Kolkata</option>
+              <option value="mumbai">Mumbai</option>
+            </select>
+          </div>
+
+          <button type="submit">Search events</button>
+        </form>
+      </section>
+
+      <section id="categories" aria-labelledby="categories-heading">
+        <h2 id="categories-heading">Browse by category</h2>
+        <ul>
+          <li><button type="button" class="category-filter" data-category="all" aria-pressed="true">All events</button></li>
+          <li><button type="button" class="category-filter" data-category="music" aria-pressed="false">Music</button></li>
+          <li><button type="button" class="category-filter" data-category="arts-culture" aria-pressed="false">Arts &amp; Culture</button></li>
+          <li><button type="button" class="category-filter" data-category="food-drink" aria-pressed="false">Food &amp; Drink</button></li>
+          <li><button type="button" class="category-filter" data-category="sports" aria-pressed="false">Sports</button></li>
+          <li><button type="button" class="category-filter" data-category="workshops" aria-pressed="false">Workshops</button></li>
+        </ul>
+      </section>
+
+      <section id="upcoming-events" aria-labelledby="upcoming-heading">
+        <header>
+          <p class="eyebrow">Curated for your calendar</p>
+          <h2 id="upcoming-heading">Upcoming events</h2>
+          <p>Sample event content for the first page structure.</p>
+        </header>
+        <p id="results-message" role="status" aria-live="polite">
+          Showing 3 upcoming sample events.
+        </p>
+
+        <div class="event-list">
+          <article id="event-1" class="event-card" data-category="music" data-city="mumbai">
+            <p class="event-card__category">Music</p>
+            <h3>Indie Night at the Waterfront</h3>
+            <p><time datetime="2027-01-16T19:00">16 January 2027, 7:00 PM</time></p>
+            <p><strong>Mumbai</strong> · Bayfront Arena</p>
+            <a href="#event-1">View event details</a>
+          </article>
+
+          <article id="event-2" class="event-card" data-category="arts-culture" data-city="kolkata">
+            <p class="event-card__category">Arts &amp; Culture</p>
+            <h3>Stories of the City</h3>
+            <p><time datetime="2027-01-23T11:00">23 January 2027, 11:00 AM</time></p>
+            <p><strong>Kolkata</strong> · Heritage Hall</p>
+            <a href="#event-2">View event details</a>
+          </article>
+
+          <article id="event-3" class="event-card" data-category="food-drink" data-city="goa">
+            <p class="event-card__category">Food &amp; Drink</p>
+            <h3>Flavours of the Coast</h3>
+            <p><time datetime="2027-02-06T12:00">6 February 2027, 12:00 PM</time></p>
+            <p><strong>Goa</strong> · Riverside Market</p>
+            <a href="#event-3">View event details</a>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer id="footer">
+      <p>&copy; 2027 Evently. Discover more, together.</p>
+      <nav aria-label="Footer navigation">
+        <ul>
+          <li><a href="#top">Back to top</a></li>
+          <li><a href="mailto:hello@evently.example">Contact</a></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
